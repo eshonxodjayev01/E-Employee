@@ -10,18 +10,17 @@
     <script src="{% static 'js/scripts.js' %}" defer></script>
 </head>
 <body>
-
-<!-- Navbar -->
-<header>
-    <nav>
+    <header class="navbar">
         <h1>E-mployeePro</h1>
-        <ul>
-            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
-            <li><a href="{% url 'profile' %}" class="active">Profile</a></li>
-            <li><a href="{% url 'community' %}">Community</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <a href="{% url 'dashboard' %}" class="active">Dashboard</a>
+            <a href="{% url 'community' %}">Community</a>
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'chat' %}">Chat Page</a>
+            <a href="{% url 'login' %}" style="color: #e74c3c; font-weight: bold;" id="logout-btn">Logout</a>
+        </nav>
+    </header>
+
 
 <!-- Profile Section -->
 <section class="profile-section">

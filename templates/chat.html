@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-mployeePro Chat</title>
+  <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+</head>
+<body>
+     <!-- Navbar -->
+    <header class="navbar">
+        <h1>E-mployeePro</h1>
+        <nav>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="{% url 'community' %}">Community</a>
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'chat' %}" class="active">Chat Page</a>
+            <a href="{% url 'login' %}" id="logout-btn">Logout</a>
+        </nav>
+    </header>
+  <div class="chat-container">
+    <!-- Sidebar for contact list -->
+    <div class="chat-sidebar">
+      <h2>Chats</h2>
+      <div class="contact-list">
+        <div class="contact">
+          <span class="contact-name">John Doe</span>
+          <span class="contact-message">Hey, how's it going?</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Jane Smith</span>
+          <span class="contact-message">Can we discuss the project?</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Michael Brown</span>
+          <span class="contact-message">I'll send over the files.</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Sarah Lee</span>
+          <span class="contact-message">Meeting at 2 pm?</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">David Kim</span>
+          <span class="contact-message">Yes, that works.</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Alice Wang</span>
+          <span class="contact-message">Great, thanks!</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Chris Evans</span>
+          <span class="contact-message">Looking forward to it!</span>
+        </div>
+        <div class="contact">
+          <span class="contact-name">Emma Johnson</span>
+          <span class="contact-message">Do you need help?</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat area -->
+    <div class="chat-main">
+      <div class="chat-header">
+        <h3>Chat with John Doe</h3>
+      </div>
+      <div class="chat-messages">
+        <!-- Sample messages -->
+        <div class="message message-sent">Hello, John!</div>
+        <div class="message message-received">Hi! How's everything going?</div>
+        <div class="message message-sent">Doing well, thanks. What about you?</div>
+        <div class="message message-received">Pretty good. Are we still on for the meeting later?</div>
+        <div class="message message-sent">Yes, definitely. I’ll send the agenda shortly.</div>
+        <div class="message message-received">Perfect, thanks!</div>
+        <div class="message message-sent">Also, let me know if there's anything specific you’d like to cover.</div>
+        <div class="message message-received">Will do. Looking forward to it.</div>
+        <div class="message message-sent">Great! Talk soon.</div>
+        <div class="message message-received">See you then!</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message..." />
+        <button>Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

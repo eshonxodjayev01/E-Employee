@@ -1,0 +1,145 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Styles */
+.navbar {
+    background-color: #022952;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.5em;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar nav a:hover {
+    color: #1abc9c;
+}
+
+.active {
+    border-bottom: 2px solid #1abc9c;
+}
+  /* Overall chat container */
+  .chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #FFFFFF;
+  }
+  
+  /* Sidebar styling */
+  .chat-sidebar {
+    width: 25%;
+    background-color: #022952; /* Deep Navy Blue */
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .chat-sidebar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-list .contact {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #04361D; /* Dark Green */
+    cursor: pointer;
+  }
+  
+  .contact-name {
+    font-weight: bold;
+  }
+  
+  .contact-message {
+    display: block;
+    color: #ddd;
+  }
+  
+  /* Chat main area */
+  .chat-main {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+  }
+  
+  /* Chat header */
+  .chat-header {
+    padding: 20px;
+    background-color: #022952;
+    color: white;
+  }
+  
+  .chat-header h3 {
+    margin: 0;
+  }
+  
+  /* Chat messages */
+  .chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #ffffff;
+  }
+  
+  .message {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .message-sent {
+    align-self: flex-end;
+    background-color: #022952; /* Deep Navy Blue */
+    color: white;
+  }
+  
+  .message-received {
+    align-self: flex-start;
+    background-color: #04361D; /* Dark Green */
+    color: white;
+  }
+  
+  /* Chat input area */
+  .chat-input {
+    display: flex;
+    padding: 20px;
+    background-color: #022952; /* Deep Navy Blue */
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #04361D; /* Dark Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

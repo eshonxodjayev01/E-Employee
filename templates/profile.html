@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - E-mployeePro</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav>
+        <h1>E-mployeePro</h1>
+        <ul>
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'profile' %}" class="active">Profile</a></li>
+            <li><a href="{% url 'community' %}">Community</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Profile Section -->
+<section class="profile-section">
+    <div class="profile-card">
+        <img src="{% static 'images/profile1.jpg' %}" alt="Profile Picture" class="profile-img">
+        <h2>{{ user.name }}</h2>
+        <p>Position: {{ user.position }}</p>
+        <p>Department: {{ user.department }}</p>
+        <p>Email: {{ user.email }}</p>
+        <a href="{% url 'profile' %}" class="edit-btn">Edit Profile</a>
+    </div>
+    <div class="profile-details">
+        <h3>About Me</h3>
+        <p>{{ user.about_me }}</p>
+        <h3>Skills</h3>
+        <ul>
+            {% for skill in user.skills %}
+            <li>{{ skill }}</li>
+            {% empty %}
+            <li>No skills listed.</li>
+            {% endfor %}
+        </ul>
+        <h3>Recent Activities</h3>
+        <ul>
+            {% for activity in user.recent_activities %}
+            <li>{{ activity }}</li>
+            {% empty %}
+            <li>No recent activities.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 E-mployeePro. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
